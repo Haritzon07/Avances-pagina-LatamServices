@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1800px; 
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: rgba(30, 30, 30, 0.85);
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+}
+
+.imagen-container {
+    position: relative;
+    width: 100%;
+    height: 350px; 
+    overflow: hidden;
+}
+
+.imagen-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.imagen-container img:hover {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #4eff91;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.category {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease; 
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.cart-btn {
+    background-color: #00ff66;
+    color: #000;
+}
+
+.cart-btn:hover {
+    background-color: #00cc52;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1da851;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 90%;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
